@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import * as yup from "yup";
 
 const Onboarding = () => {
   const [formData, setFormData] = useState({
@@ -8,11 +9,22 @@ const Onboarding = () => {
     password: "",
   });
 
-  const onInputChange = (event) => {};
+  const onInputChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div>
-      <form>
+      <form onSubmit={onSubmit}>
         <input
+          onChange={onInputChange}
           type="text"
           id="name"
           name="username"
@@ -25,13 +37,21 @@ const Onboarding = () => {
           placeholder="First Name:"
         ></input>
         <input
+          onChange={onInputChange}
           type="text"
           id="lastname"
           name="lastname"
           placeholder="LastName:"
         ></input>
-        <input type="text" id="email" name="email" placeholder="Email:"></input>
         <input
+          onChange={onInputChange}
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Email:"
+        ></input>
+        <input
+          onChange={onInputChange}
           type="text"
           id="password"
           name="password"
