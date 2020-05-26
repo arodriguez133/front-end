@@ -28,12 +28,14 @@ const Onboarding = () => {
           type="text"
           id="name"
           name="username"
+          value={formData.username}
           placeholder="Username:"
         ></input>
         <input
           type="text"
           id="firstname"
           name="firstname"
+          value={formData.firstname}
           placeholder="First Name:"
         ></input>
         <input
@@ -41,6 +43,7 @@ const Onboarding = () => {
           type="text"
           id="lastname"
           name="lastname"
+          value={formData.lastname}
           placeholder="LastName:"
         ></input>
         <input
@@ -48,6 +51,7 @@ const Onboarding = () => {
           type="text"
           id="email"
           name="email"
+          value={formData.password}
           placeholder="Email:"
         ></input>
         <input

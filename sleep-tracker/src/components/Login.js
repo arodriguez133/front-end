@@ -24,6 +24,7 @@ const Login = (props) => {
           onChange={onInputChange}
           id="email"
           name="email"
+          value={formData.email}
           placeholder="Email:"
         ></input>
 
@@ -31,6 +32,7 @@ const Login = (props) => {
           onChange={onInputChange}
           id="password"
           name="password"
+          value={formData.password}
           placeholder="Password:"
         ></input>
 
